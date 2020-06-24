@@ -13,8 +13,19 @@ $(() => {
 
         // You can specify inline conversions
         { from: 'cm', to: 'm', convertFunc: value => value / 100 },
+
+        { from: 'm', to: 'babyelephant', convertFunc: fromMeterToBabyElephant },
+        { from: 'babyelephant', to: 'm', convertFunc: fromBabyElephantToMeter },
+
     ];
     
+    function fromMeterToBabyElephant(value) {
+        return value;
+    }
+    
+    function fromBabyElephantToMeter(value) {
+        return value;
+    }
     function fromMeterToCentimeter(value) {
         return value * 100;
     }
